@@ -2,6 +2,16 @@ import requests
 from bs4 import BeautifulSoup
 import time
 import random
+import logging
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+
+logging.info("Script started...")
+
+# Your existing scraping code here
+
+
+
 
 #visa slots website
 URL = "https://visaslots.info"
@@ -74,3 +84,6 @@ while True:
     sleep_time = random.randint(60, 300)
     print(f"⏳ Sleeping for {sleep_time} seconds before next check...")
     time.sleep(sleep_time)
+
+    
+logging.info("Script finished successfully.")
